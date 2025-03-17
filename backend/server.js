@@ -17,6 +17,7 @@ app.use(cors());
 app.use(bodyParser.json()); // To parse JSON bodies
 
 // MongoDB connection
+console.log(process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));

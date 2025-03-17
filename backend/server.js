@@ -18,7 +18,8 @@ app.use(bodyParser.json()); // To parse JSON bodies
 
 // MongoDB connection
 console.log(process.env.MONGODB_URI);
-mongoose.connect(`mongodb+srv://samuel:samuel123@cluster0.1ophkvp.mongodb.net/Chats`) , { useNewUrlParser: true, useUnifiedTopology: true })
+console.log(MONGODB_URI);
+mongoose.connect(`mongodb+srv://samuel:samuel123@cluster0.1ophkvp.mongodb.net/Chats` , { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 

@@ -1,0 +1,52 @@
+.bg-orange {
+  background-color: #FFA500; /* Orange color */
+}
+.bg-white{
+  background-color: white;
+}
+
+/* styles.css or Message.css */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-window {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input-container {
+  background-color: #f8f9fa;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message-box {
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 70%;
+}
+
+.user-box {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.admin-box {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.message p {
+  word-wrap: break-word;
+}

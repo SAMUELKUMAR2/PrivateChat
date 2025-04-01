@@ -13,7 +13,7 @@ function App({ role }) {
 
   // Fetch messages from backend when the component mounts
   useEffect(() => {
-    axios.get(`${API_URL}/messages`)
+    axios.get(`${API_URL}/api/messages`)
       .then((response) => {
         setMessages(response.data); // Fetch messages from the backend
       })
@@ -25,7 +25,7 @@ function App({ role }) {
 
   // Function to send a message to the backend
   const sendMessage = (message) => {
-    axios.post(`${API_URL}/messages`, { text: message.text, role })
+    axios.post(`${API_URL}/api/messages`, { text: message.text, role })
       .then((response) => {
         setMessages([...messages, response.data]); // Append the new message
       })
@@ -37,7 +37,7 @@ function App({ role }) {
 
   // Function to delete all messages
   const deleteAllMessages = () => {
-    axios.delete(`${API_URL}/messages`)
+    axios.delete(`${API_URL}/api/messages`)
       .then((response) => {
         setMessages([]); // Clear the messages in the frontend
         toast.success('All messages deleted!');

@@ -13,7 +13,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${API_URL}/api/auth/login`, { name })
+    axios.post(`localhost://5000/api/auth/login`, { name })
       .then((response) => {
         if (response.data.role) {
           onLogin(response.data.role); // Pass role (admin or user) to the App component

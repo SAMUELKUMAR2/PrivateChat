@@ -3,13 +3,12 @@
   publish = "dist"  # Adjust based on your output directory
 
 [context.production]
-  command = "npm run build:prod"  # Custom build command for production
+  command = "npm run build"  # Updated to use existing build script
 
 [context.deploy-preview]
-  command = "npm run build:staging"  # Custom build command for preview deployments
+  command = "npm run build"  # Updated to match available scripts
 
 [[redirects]]
-
 from="/*"
 to="/index.html"
 status=200

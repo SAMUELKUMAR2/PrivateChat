@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"  # Adjust based on your project's build command
+  publish = "dist"  # Adjust based on your output directory
+
+[build.environment]
+  NODE_VERSION = "18"  # Set your desired Node.js version
+
+[context.production]
+  command = "npm run build:prod"  # Custom build command for production
+
+[context.deploy-preview]
+  command = "npm run build:staging"  # Custom build command for preview deployments
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    
